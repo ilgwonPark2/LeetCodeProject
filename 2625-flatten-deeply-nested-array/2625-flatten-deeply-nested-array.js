@@ -15,17 +15,14 @@ const flat = function (arr, n) {
         
         target.forEach(targetItem => {
             if (Array.isArray(targetItem)) {
-                // console.log('---------')
-                // console.log("tagret", targetItem, "count", count, "result",result)
                 const recursiveResult = recursiveFunc(targetItem, count + 1, result);
-                // console.log("recursiveResult", recursiveResult)
                 if (recursiveResult !== undefined) result.push(recursiveResult)
             } else {
                 // console.log(targetItem)
                 result.push(targetItem)
             }
         })
-        // console.log('result:  '  + result)
+    
     }
     
     recursiveFunc(arr, 0, result)
