@@ -9,7 +9,7 @@ function memoize(fn) {
     
     if (key in cache) return cache[key];
     
-    const result = fn.apply(this, args);
+    const result = fn(...args);
     cache[key] = result;
     
     return result;
