@@ -5,7 +5,7 @@
  */
 const threeSumClosest = (nums, target) => {
     
-    nums.sort((a,b) => a-b);
+    nums.sort((a,b) => a - b);
     // check a difference bewteen two values
     const difference = (a, b) => Math.abs(a - b);
     
